@@ -31,7 +31,7 @@
          $totalInstalled = 0
 
          Foreach ($objSlot In $colSlots){
-            "Total Number of DIMM Slots: " + $objSlot.MemoryDevices
+            "Total Slots: " + $objSlot.MemoryDevices
             $totalSlots = $objSlot.MemoryDevices
         }
 
@@ -92,7 +92,7 @@
          ""
          "Total Installed: $totalInstalled GB"
          $freeSlots = $totalSlots - $totalSticks
-         "Total Free Slots: $freeSlots" 
+         "Free Slots: $freeSlots" 
          ""
          ""
          "Storage Details for $compCAP"
@@ -105,13 +105,13 @@
               $totalDrives = $totalDrives + 1
          }
 
-        "Total Number of Drives: $totalDrives"
+        "No. of Drives: $totalDrives"
         ""
           Foreach ($objDrive In $diskDrives){
               "Drive: " + $objDrive.Name
               "Model: " + $objDrive.Model
               $diskSize = [Math]::Floor($objDrive.Size / 1000000000)
-              "Size: $diskSize GB"
+              "Capacity: $diskSize GB"
               ""
          }
     } else {
