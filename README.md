@@ -1,2 +1,2 @@
 # Upgrade-Check
-PowerShell script to query a specified device on proc, memory and storage
+PowerShell script using WMI queries to report back details on CPU, RAM and storage for one device.
